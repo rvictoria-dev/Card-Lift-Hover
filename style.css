@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: start;
+  padding: 3rem 2rem;
+  background: #f5f4f0;
+  font-family: sans-serif;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Simple lift — Card moves up 6px on hover */
+.lift-simple {
+  transition: transform 0.2s ease;
+}
+.lift-simple:hover {
+  transform: translateY(-6px);
+}
+
+/*  Lift + scale — Card moves up and grows slightly */
+.lift-scale {
+  transition: transform 0.2s ease;
+}
+.lift-scale:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Lift + border accent — A colored bottom border appears on hover */
+.lift-border {
+  border-bottom: 2px solid transparent; /* invisible by default */
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.lift-border:hover {
+  transform: translateY(-6px);
+  border-bottom-color: #534ab7; /* appears on hover */
+}
+
+/* Lift + background change — Background shifts to a slightly different tone */
+.lift-bg {
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.lift-bg:hover {
+  transform: translateY(-6px);
+  background: #f0eeff;
+}
+
+/* Slow elastic lift — cubic-bezier creates a springy overshot effect */
+.lift-slow {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lift-slow:hover {
+  transform: translateY(-8px);
+}
+
+/* Lift + tilt — Card moves up with a slight rotation
+  negative = tilts left, positive = tilts right */
+.lift-tilt {
+  transition: transform 0.2s ease;
+}
+.lift-tilt:hover {
+  transform: translateY(-6px) rotate(-1.5deg);
+}

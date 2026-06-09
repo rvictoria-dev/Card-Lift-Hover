@@ -6,6 +6,24 @@ A simple CSS project that explores different card hover effects and how small an
 
 ---
 
+### 📁 Project structure
+
+```
+card-lift-hover/
+├── index.html
+├── style.css
+└── README.md
+```
+
+---
+
+### 🛠️ Built With
+
+- HTML
+- CSS
+
+---
+
 ### 💡 What i learned
 
 - How ``min-height`` helps elements fill the available screen space
@@ -14,13 +32,6 @@ A simple CSS project that explores different card hover effects and how small an
 - How ``line-height`` makes text easier to read and overall design
 
 This project helped me better understand responsive layouts and how subtle CSS animations can enhance the user experience.
-
----
-
-### 🛠️ Built With
-
-- HTML
-- CSS
 
 ---
 
